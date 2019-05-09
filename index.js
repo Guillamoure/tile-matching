@@ -151,7 +151,7 @@ function getHighScore() {
     let games = (json.data.map(el => el.relationships.games.data)).flat()
     leaderboard("Easy", "4", games, json)
     leaderboard("Hard", "8", games, json)
-    leaderboard("Super Hard", "10", games, json)
+    leaderboard("Super Hard", "12", games, json)
   })
 }
 getHighScore()
@@ -222,7 +222,7 @@ function refreshGame() {
   //prevents click events
   doingSomething = "yes"
   //informs the user
-  messages.innerHTML = `${user}! Pay Attention!!`
+  messages.innerHTML = `${user}, try to remember...`
   let i = 0
 
   //this constant is used to measure how many times the below function should loop
@@ -442,7 +442,7 @@ document.addEventListener("click", function (e){
             timerHeader.style.opacity = 0
 
 
-            messages.innerHTML = `${user}! You win! Your time was ${result}!`
+            messages.innerHTML = `${user}! It took you ${result} to remember everything!`
           }
 
           // More often that not, this is the options chosen
